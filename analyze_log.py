@@ -23,7 +23,7 @@ def analyze_log_file(filename="access.log"):
     # set up variables to store the datetime, error count, unique IPs, and URL counts for the log file.
     datetime = []
     error_count = 0
-    unique_ips = ()
+    unique_ips = set()
     url_count = {}
     # a.  loop through each line in the log file.  This would be the log_lines list if you opened the log the same way as in the instructions.
     for line in log_lines:
@@ -38,8 +38,8 @@ def analyze_log_file(filename="access.log"):
         else:
             url_count[url] = 1
     #     - if the status code is greater than or equal to 400, increment the error count by 1.
-    
-
+        if int(status_code) >= 400:
+            error_count += 1    
     # d.  Print out the summary information as shown in the instructions.  It should look like this:
     '''
     Total Errors (4xx and 5xx): 52
