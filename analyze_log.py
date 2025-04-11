@@ -45,7 +45,7 @@ def analyze_log_file(filename="access.log"):
     print(f'Unique IP Addresses: {len(unique_ips)}')
     for url, count in url_count.items():
         print(f'    {url}: {count}')
-    # I went back to check if there was an easier way for the spacing and just assumed it was a tab, my url names also seem to be in a different order so I am not sure if I messed something up here.
+    # I went back to check if there was an easier way for the spacing and just assumed it was a tab.
     '''
     Total Errors (4xx and 5xx): 52
     Unique IP Addresses: 22
