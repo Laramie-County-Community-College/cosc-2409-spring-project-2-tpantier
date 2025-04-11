@@ -33,6 +33,10 @@ def analyze_log_file(filename="access.log"):
     #     - if the ip is not in your unique_ips set, add it to the set.
         unique_ips.add(ip)    
     #     - if the url is in your url_counts dictionary, increment the count by 1, otherise add the url to the dictionary with a count of 1.
+        if url in url_count:
+            url_count[url] += 1
+        else:
+            url_count[url] = 1
     #     - if the status code is greater than or equal to 400, increment the error count by 1.
     
 
