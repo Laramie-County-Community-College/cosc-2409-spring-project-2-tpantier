@@ -41,6 +41,8 @@ def analyze_log_file(filename="access.log"):
         if int(status_code) >= 400:
             error_count += 1    
     # d.  Print out the summary information as shown in the instructions.  It should look like this:
+    print(f'Total Errors (4xx and 5xx): {error_count}')
+    print(f'Unique IP Addresses: {len(unique_ips)}')
     '''
     Total Errors (4xx and 5xx): 52
     Unique IP Addresses: 22
