@@ -26,7 +26,9 @@ def analyze_log_file(filename="access.log"):
     unique_ips = ()
     url_count = {}
     # a.  loop through each line in the log file.  This would be the log_lines list if you opened the log the same way as in the instructions.
-    # b.  inside this loop, first extract the log data using the extract_log_data function or the regular expression given in the instructions. 
+    for line in log_lines:
+    # b.  inside this loop, first extract the log data using the extract_log_data function or the regular expression given in the instructions.
+           timestamp, ip, url, status_code = extract_log_data 
     # c.  if the data is extracted successfully, update the error count, unique IPs, and URL counts.
     #     - if the ip is not in your unique_ips set, add it to the set.
         
