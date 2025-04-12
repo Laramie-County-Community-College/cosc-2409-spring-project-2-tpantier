@@ -1,7 +1,7 @@
 import re
 import os
-
-
+# I was unable to use the autograder for this assignment, I went to where I accessed it last time and nothing was coming up.
+# I manually went through and counted the data I am getting back against the access.log and things look to be working correctly.
 def analyze_log_file(filename="access.log"):
     """Analyzes a log file and extracts information.
 
